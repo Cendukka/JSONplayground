@@ -9,11 +9,11 @@ def index(request):
     return HttpResponse("Hello World!")
 
 def temperature(request):
-    latest_temperatures = Temperature.objects.order_by('measure_date')[:2]
+    latest_temperatures = Temperature.objects.order_by('measure_date')[:3]
     context = {
         'latest_temperatures': latest_temperatures,
     }
-    return render(request, 'weather/temperature.html')
+    return render(request, 'weather/temperature.html',context)
 def temperature_id(request, temp_id):
     return HttpResponse("Temperature id: %s" % temp_id)
 
