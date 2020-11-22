@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    {% if latest_temperatures %}
+    <ul>
+    {% for temperature in latest_temperatures %}
+        <li><a href="./temperatures/{{ temperature.id }}/">{{ temperature.temperature_name }}</a></li>
+        <li><a>{{ temperature.measure_date }}</a></li>
+        <li><a>{{ temperature.temperature_c }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No temperatures are available.</p>
+{% endif %}
+  </body>
+</html>
