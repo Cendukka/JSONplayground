@@ -6,7 +6,7 @@ include/
 pip-selfcheck.json
 
 # Django related 
-src/JSONplayground/settings.py
+src/JSONplayground/JSONplayground/settings.py
 static-cdn/  # any collected static files 
 
 
